@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "buildable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bogue89/buildable",
+      "state" : {
+        "revision" : "8e72e0f3c326821f0825724ddcc05babdd2cdf4b",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
