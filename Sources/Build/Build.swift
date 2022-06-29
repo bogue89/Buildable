@@ -1,22 +1,3 @@
-import Foundation
-
-public protocol Buildable { }
-
-extension Buildable {
-    func setup(_ builder: (inout Self) -> ()) -> Self {
-        var mutating = self
-        builder(&mutating)
-        return mutating
-    }
-}
-
-extension NSObject: Buildable {
-    static func setup<T: NSObject>(_ builder: (inout T) -> ()) -> T {
-        T().setup(builder)
-    }
-}
-
-
 public func build<T>(_ builder: () -> T) -> T {
     builder()
 }

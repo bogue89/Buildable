@@ -1,5 +1,5 @@
 import XCTest
-@testable import Builder
+@testable import Build
 
 final class StringTests: XCTestCase {
 

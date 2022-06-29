@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-@testable import Builder
+@testable import BuildableObjects
 
 final class BuildableTests: XCTestCase {
 
