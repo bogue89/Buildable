@@ -3,16 +3,16 @@ import Foundation
 public protocol Buildable { }
 
 extension Buildable {
-    func setup(_ build: (inout Self) -> ()) -> Self {
+    func setup(_ builder: (inout Self) -> ()) -> Self {
         var mutating = self
-        build(&mutating)
+        builder(&mutating)
         return mutating
     }
 }
 
 extension NSObject: Buildable {
-    static func setup<T: NSObject>(_ build: (inout T) -> ()) -> T {
-        T().setup(build)
+    static func setup<T: NSObject>(_ builder: (inout T) -> ()) -> T {
+        T().setup(builder)
     }
 }
 
