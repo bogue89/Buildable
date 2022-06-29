@@ -10,17 +10,36 @@ final class StringTests: XCTestCase {
 
         XCTAssertEqual(sut, value)
     }
-
+    
     func testBuilderInitialization() {
         let sut = build(String(value))
 
         XCTAssertEqual(sut, value)
     }
 
-    func testBuilderSetup() {
-        let sut = build(String()) { $0+value }
+    func testBuilderClosure() {
+        let sut = build {
+            String(value)
+        }
 
         XCTAssertEqual(sut, value)
+    }
+
+    func testBuilderSetup() {
+        let sut = build(String()) {
+            let string = $0+value
+            return string
+        }
+
+        XCTAssertEqual(sut, value)
+    }
+
+    func testBuilderOptionalSetup() {
+        let sut = build(String()) { _ in
+            return nil
+        }
+
+        XCTAssertNil(sut)
     }
 
     func testBuilderInferingType() {
@@ -40,19 +59,19 @@ final class StringTests: XCTestCase {
     }
 
     func throwableBuilderWithThrow() throws -> String {
-        try build(String(value)) { _ in throw error }
+        try buildWithError(String(value)) { _ in throw error }
     }
 
     func throwableBuilderWithoutThrow() -> String {
-        (try? build(String(value)) { _ in throw error }) ?? value
+        (try? buildWithError(String(value)) { _ in throw error }) ?? value
     }
 
     func throwableBuilderOptionalWithThrow() throws -> String? {
-        try build(String(value)) { _ in throw error }
+        try buildWithError(String(value)) { _ in throw error }
     }
 
     func throwableBuilderOptionalWithoutThrow() -> String? {
-        try? build(String(value)) { _ in throw error }
+        try? buildWithError(String(value)) { _ in throw error }
     }
 
     func testBuilderThrowableBuilder() {
