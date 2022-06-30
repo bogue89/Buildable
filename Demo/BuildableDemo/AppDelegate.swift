@@ -11,7 +11,7 @@ import BuildableObjects
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow? = .setup {
+    var window: UIWindow? = UIWindow().setup {
         $0.rootViewController = ViewController()
         $0.makeKeyAndVisible()
     }

@@ -12,9 +12,9 @@
 		C33D6636286CE742006FC2B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D6635286CE742006FC2B6 /* ViewController.swift */; };
 		C33D663B286CE745006FC2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33D663A286CE745006FC2B6 /* Assets.xcassets */; };
 		C33D663E286CE745006FC2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33D663C286CE745006FC2B6 /* LaunchScreen.storyboard */; };
-		C33D6647286CE8E5006FC2B6 /* Build in Frameworks */ = {isa = PBXBuildFile; productRef = C33D6646286CE8E5006FC2B6 /* Build */; };
-		C33D6649286CE8E5006FC2B6 /* Buildable in Frameworks */ = {isa = PBXBuildFile; productRef = C33D6648286CE8E5006FC2B6 /* Buildable */; };
-		C33D664B286CE8E5006FC2B6 /* BuildableObjects in Frameworks */ = {isa = PBXBuildFile; productRef = C33D664A286CE8E5006FC2B6 /* BuildableObjects */; };
+		C33D6650286D2336006FC2B6 /* BuildableObjects in Frameworks */ = {isa = PBXBuildFile; productRef = C33D664F286D2336006FC2B6 /* BuildableObjects */; };
+		C33D6652286D233B006FC2B6 /* Build in Frameworks */ = {isa = PBXBuildFile; productRef = C33D6651286D233B006FC2B6 /* Build */; };
+		C33D6654286D233F006FC2B6 /* Buildable in Frameworks */ = {isa = PBXBuildFile; productRef = C33D6653286D233F006FC2B6 /* Buildable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +25,7 @@
 		C33D663A286CE745006FC2B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C33D663D286CE745006FC2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C33D663F286CE745006FC2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33D664D286D22D7006FC2B6 /* Buildable */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Buildable; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,9 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C33D664B286CE8E5006FC2B6 /* BuildableObjects in Frameworks */,
-				C33D6647286CE8E5006FC2B6 /* Build in Frameworks */,
-				C33D6649286CE8E5006FC2B6 /* Buildable in Frameworks */,
+				C33D6654286D233F006FC2B6 /* Buildable in Frameworks */,
+				C33D6650286D2336006FC2B6 /* BuildableObjects in Frameworks */,
+				C33D6652286D233B006FC2B6 /* Build in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +46,9 @@
 			isa = PBXGroup;
 			children = (
 				C33D6630286CE742006FC2B6 /* BuildableDemo */,
+				C33D664C286D22D7006FC2B6 /* Packages */,
 				C33D662F286CE742006FC2B6 /* Products */,
+				C33D664E286D2336006FC2B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +73,21 @@
 			path = BuildableDemo;
 			sourceTree = "<group>";
 		};
+		C33D664C286D22D7006FC2B6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C33D664D286D22D7006FC2B6 /* Buildable */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		C33D664E286D2336006FC2B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,9 +105,9 @@
 			);
 			name = BuildableDemo;
 			packageProductDependencies = (
-				C33D6646286CE8E5006FC2B6 /* Build */,
-				C33D6648286CE8E5006FC2B6 /* Buildable */,
-				C33D664A286CE8E5006FC2B6 /* BuildableObjects */,
+				C33D664F286D2336006FC2B6 /* BuildableObjects */,
+				C33D6651286D233B006FC2B6 /* Build */,
+				C33D6653286D233F006FC2B6 /* Buildable */,
 			);
 			productName = BuildableDemo;
 			productReference = C33D662E286CE742006FC2B6 /* BuildableDemo.app */;
@@ -120,7 +138,6 @@
 			);
 			mainGroup = C33D6625286CE742006FC2B6;
 			packageReferences = (
-				C33D6645286CE8E5006FC2B6 /* XCRemoteSwiftPackageReference "buildable" */,
 			);
 			productRefGroup = C33D662F286CE742006FC2B6 /* Products */;
 			projectDirPath = "";
@@ -357,32 +374,18 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		C33D6645286CE8E5006FC2B6 /* XCRemoteSwiftPackageReference "buildable" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/bogue89/buildable";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		C33D6646286CE8E5006FC2B6 /* Build */ = {
+		C33D664F286D2336006FC2B6 /* BuildableObjects */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C33D6645286CE8E5006FC2B6 /* XCRemoteSwiftPackageReference "buildable" */;
+			productName = BuildableObjects;
+		};
+		C33D6651286D233B006FC2B6 /* Build */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = Build;
 		};
-		C33D6648286CE8E5006FC2B6 /* Buildable */ = {
+		C33D6653286D233F006FC2B6 /* Buildable */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C33D6645286CE8E5006FC2B6 /* XCRemoteSwiftPackageReference "buildable" */;
 			productName = Buildable;
-		};
-		C33D664A286CE8E5006FC2B6 /* BuildableObjects */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C33D6645286CE8E5006FC2B6 /* XCRemoteSwiftPackageReference "buildable" */;
-			productName = BuildableObjects;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
