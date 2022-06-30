@@ -20,33 +20,19 @@ Set the Dependency Rule to Up to Next Major Version using the latest `Buildable`
 
 Resolve Package Versions
 
-## Swift Package Manager
-
-#### Add dependencies
-
-Add the `Buildable` package to the dependencies within your application’s `Package.swift` file. Substitute `"x.x.x"` with the latest `Buildable` [release](https://github.com/bogue89/Buildable/releases).
-
-```swift
-.package(url: "https://github.com/bogue89/Buildable.git", from: "x.x.x")
-```
-
-Add `Buildable` to your target's dependencies:
-
-```swift
-.target(name: "example", dependencies: ["Buildable"]),
-```
-
 ## Uses
 
 #### Import package
 
 ```swift
+import Build
 import Buildable
+import BuildableObjects
 ```
 
-#### Uses
+#### Demos
 
-`Build` simplifies declarations, works well with property wrappers, and the it works with @autoclosures so the work is done only when need it
+`Build` simplifies declarations, works well with property wrappers, and it works with @autoclosures so the work is done only when need it
 
 ```swift
 // DEMO 2: infering type from builder
@@ -80,6 +66,23 @@ try buildWithError(.touches(times: taps)) {
     return $0
 }
 ```
+
+## Swift Package Manager
+
+#### Add dependencies
+
+Add the `Buildable` package to the dependencies within your application’s `Package.swift` file. Substitute `"x.x.x"` with the latest `Buildable` [release](https://github.com/bogue89/Buildable/releases).
+
+```swift
+.package(url: "https://github.com/bogue89/Buildable.git", from: "x.x.x")
+```
+
+Add `Buildable` to your target's dependencies:
+
+```swift
+.target(name: "example", dependencies: ["Buildable"]),
+```
+
 ### Swift version
 
 The latest version of Buildable requires **Swift 4.0** or later. You can download this version of the Swift binaries by following this [link](https://swift.org/download/).
