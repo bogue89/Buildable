@@ -12,7 +12,7 @@ import BuildableObjects
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow? = UIWindow().setup {
-        $0.rootViewController = ViewController()
+        $0.rootViewController = DemoViewController()
         $0.makeKeyAndVisible()
     }
 

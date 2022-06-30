@@ -36,8 +36,8 @@ import BuildableObjects
 
 ```swift
 // DEMO 2: infering type from builder
-let tap = build {
-    UITapGestureRecognizer(target: ViewController.self, action: #selector(tapped))
+lazy var tap = build {
+    UITapGestureRecognizer(target: self, action: #selector(tapped))
 }
 ```
 

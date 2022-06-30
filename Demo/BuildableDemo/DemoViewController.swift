@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DemoViewController.swift
 //  BuildableDemo
 //
 //  Created by Jorge Benavides
@@ -9,7 +9,7 @@ import UIKit
 import Build
 import Buildable
 
-class ViewController: UIViewController {
+class DemoViewController: UIViewController {
 
     // DEMO 1: static method from the Buildable NSObject
     let icon: UIImageView = .create {
