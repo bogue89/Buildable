@@ -2,7 +2,7 @@ import Foundation
 import Buildable
 
 extension NSObject: Buildable {
-    public static func setup<T: NSObject>(_ builder: (inout T) -> ()) -> T {
-        T().setup(builder)
+    public static func create<T: NSObject>(_ setup: (inout T) -> ()) -> T {
+        T().setup(setup)
     }
 }

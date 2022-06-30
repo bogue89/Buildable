@@ -15,7 +15,7 @@ final class BuildableTests: XCTestCase {
     }
 
     func testBuildableStatic() {
-        let sut: NSMutableData = .setup {
+        let sut: NSMutableData = .create {
             $0.append(data)
         }
 
@@ -58,7 +58,7 @@ extension BuildableTests {
     func testBuildableUILabel() {
         let text = "hello world!"
         
-        let sut: UILabel = .setup {
+        let sut: UILabel = .create {
             $0.text = text
         }
         XCTAssertEqual(sut.text, text)
