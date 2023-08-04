@@ -60,7 +60,7 @@ class DemoViewController: UIViewController {
             return try buildWithError(.touches(times: taps)) {
                 guard case .touches(let times) = $0 else { return $0 }
                 if times > 3 {
-                    throw NSError()
+                    throw NSError(domain: "", code: 0)
                 } else if times > 2 {
                     return .warning
                 }
@@ -80,8 +80,4 @@ enum UserEvent {
     case touches(times: Int)
     case warning
     case error
-}
-
-extension UserEvent: Buildable {
-    // default implementation for setup
 }

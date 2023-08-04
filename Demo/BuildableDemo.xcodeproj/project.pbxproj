@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		709A379429CE330D001834EA /* Build in Frameworks */ = {isa = PBXBuildFile; productRef = 709A379329CE330D001834EA /* Build */; };
+		709A379629CE3310001834EA /* Buildable in Frameworks */ = {isa = PBXBuildFile; productRef = 709A379529CE3310001834EA /* Buildable */; };
 		C33D6632286CE742006FC2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D6631286CE742006FC2B6 /* AppDelegate.swift */; };
 		C33D6634286CE742006FC2B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D6633286CE742006FC2B6 /* SceneDelegate.swift */; };
 		C33D6636286CE742006FC2B6 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D6635286CE742006FC2B6 /* DemoViewController.swift */; };
 		C33D663B286CE745006FC2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33D663A286CE745006FC2B6 /* Assets.xcassets */; };
 		C33D663E286CE745006FC2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33D663C286CE745006FC2B6 /* LaunchScreen.storyboard */; };
 		C33D6650286D2336006FC2B6 /* BuildableObjects in Frameworks */ = {isa = PBXBuildFile; productRef = C33D664F286D2336006FC2B6 /* BuildableObjects */; };
-		C33D6652286D233B006FC2B6 /* Build in Frameworks */ = {isa = PBXBuildFile; productRef = C33D6651286D233B006FC2B6 /* Build */; };
-		C33D6654286D233F006FC2B6 /* Buildable in Frameworks */ = {isa = PBXBuildFile; productRef = C33D6653286D233F006FC2B6 /* Buildable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C33D6654286D233F006FC2B6 /* Buildable in Frameworks */,
+				709A379629CE3310001834EA /* Buildable in Frameworks */,
 				C33D6650286D2336006FC2B6 /* BuildableObjects in Frameworks */,
-				C33D6652286D233B006FC2B6 /* Build in Frameworks */,
+				709A379429CE330D001834EA /* Build in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +106,8 @@
 			name = BuildableDemo;
 			packageProductDependencies = (
 				C33D664F286D2336006FC2B6 /* BuildableObjects */,
-				C33D6651286D233B006FC2B6 /* Build */,
-				C33D6653286D233F006FC2B6 /* Buildable */,
+				709A379329CE330D001834EA /* Build */,
+				709A379529CE3310001834EA /* Buildable */,
 			);
 			productName = BuildableDemo;
 			productReference = C33D662E286CE742006FC2B6 /* BuildableDemo.app */;
@@ -375,17 +375,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C33D664F286D2336006FC2B6 /* BuildableObjects */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BuildableObjects;
-		};
-		C33D6651286D233B006FC2B6 /* Build */ = {
+		709A379329CE330D001834EA /* Build */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Build;
 		};
-		C33D6653286D233F006FC2B6 /* Buildable */ = {
+		709A379529CE3310001834EA /* Buildable */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Buildable;
+		};
+		C33D664F286D2336006FC2B6 /* BuildableObjects */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BuildableObjects;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
